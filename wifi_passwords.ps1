@@ -12,7 +12,7 @@ foreach ($profile in $wifiProfiles) {
         "password" = $password.Trim()
     }
 
-    $response = Invoke-WebRequest -Uri "http://127.0.0.1:8000/" -Method POST -Body ($postParams|ConvertTo-Json)-ContentType "application/json"
+    $response = Invoke-WebRequest -Uri "http://127.0.0.1:8000/" -Method POST -Body ($postParams|ConvertTo-Json)-ContentType "application/json" -UseBasicParsing
 
     if($response.StatusCode -eq 201) {
         Write-Host "Successfully sent data to server" -ForegroundColor Green

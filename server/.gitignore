@@ -1,2 +1,4 @@
 env/
 .idea/
+__pycache__
+database/wifi_database.db

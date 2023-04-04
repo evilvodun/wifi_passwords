@@ -5,3 +5,4 @@ foreach ($profile in $wifiProfiles) {
     Write-Host "Password: $password" -ForegroundColor Green
     Write-Host ""
 }
+dsdsd

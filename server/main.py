@@ -32,9 +32,13 @@ def get_wifis(repository: Repository = Depends()):
 
 @app.delete("/{wifi_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_wifis(wifi_id: int, repository: Repository = Depends()):
-
     if not repository.delete_by_id(wifi_id):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST)
+
+
+@app.get("/danger", status_code=status.HTTP_204_NO_CONTENT)
+def danger_delete(repository: Repository = Depends()):
+    return repository.delete_all()
 
 
 @app.on_event("startup")

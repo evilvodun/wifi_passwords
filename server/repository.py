@@ -31,3 +31,11 @@ class Repository:
             self.db.commit()
             return True
         return False
+
+    def delete_all(self):
+        wifis = self.db.query(Wifi).all()
+
+        for wifi in wifis:
+            print(wifi)
+            self.db.delete(wifi)
+            self.db.commit()

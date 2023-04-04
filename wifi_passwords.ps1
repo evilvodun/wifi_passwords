@@ -1,6 +1,6 @@
-$wifiProfiles = netsh wlan show profiles | Select-String "All User Profile" | ForEach-Object { $_.ToString().Trim().Split(":") }
+$wifiProfiles = netsh wlan show profiles | Select-String "All User Profile" | ForEach-Object { $_.ToString().Trim().Split(":")[1] }
 foreach ($profile in $wifiProfiles) {
-    $password = (netsh wlan show profile name=$profile key=clear | Select-String "Key Content").ToString().Split(": ")[1]
+    $password = (netsh wlan show profile name=$profile key=clear | Select-String "Key Content").ToString().Trim().Split(":")[1]
     Write-Host "SSID: $profile" -ForegroundColor Green
     Write-Host "Password: $password" -ForegroundColor Green
     Write-Host ""

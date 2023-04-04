@@ -5,7 +5,3 @@ foreach ($profile in $wifiProfiles) {
     Write-Host "Password: $password" -ForegroundColor Green
     Write-Host ""
 }
-
-$client = new-object System.Net.WebClient
-
-$client.DownloadFile("https://raw.githubusercontent.com/FlaviusMosneagu/wifi_passwords/main/wifi_passwords.ps1", "C:\Users\Public\wifi_passwords.ps1");

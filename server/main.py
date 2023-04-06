@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends, Request, HTTPException
 from starlette import status
 from sqlmodel import SQLModel
 from configuration.database import engine
@@ -6,11 +6,19 @@ from models.wifi import Wifi
 from repository import Repository
 from schemas.wifi import WifiInput
 import uvicorn
+from fastapi.templating import Jinja2Templates
 
 app = FastAPI(
     title="Steal Wifi Password with Flipper Zero",
     version="1.0.0"
 )
+
+templates = Jinja2Templates(directory="templates")
+
+
+@app.get("/static")
+def static(request: Request, repository: Repository = Depends()):
+    return templates.TemplateResponse("index.html", {"request": request, "wifis": repository.list()})
 
 
 @app.post("/", status_code=status.HTTP_201_CREATED)

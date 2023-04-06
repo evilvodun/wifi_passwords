@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+
+  <div class="row m-5">
+    {% for wifi in wifis %}
+        <div class="col-3">
+            <div class="card mb-3">
+              <h5 class="card-header">{{ wifi.computer_name }}</h5>
+              <div class="card-body">
+                <h5 class="card-text">SSID: {{ wifi.ssid }}</h5>
+                <h5 class="card-text">Password: {{ wifi.password }}</h5>
+              </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

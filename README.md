@@ -15,5 +15,5 @@ pip install -r requirements
 python main.py
 ```
 
-On `/static` is a basic dashboard to list all the wifis captured by flipper zero.  
+On `/static` route it is a basic dashboard to list all the wifis captured by flipper zero.  
 Also take a look at the `routes` in `main.py` to see all available endpoints.

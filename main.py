@@ -7,12 +7,14 @@ from repository import Repository
 from schemas.wifi import WifiInput
 import uvicorn
 from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(
-    title="Steal Wifi Password with Flipper Zero",
+    title="Steal saved wifi passwords with Flipper Zero on windows",
     version="1.0.0"
 )
 
+app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 

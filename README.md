@@ -1,6 +1,6 @@
-## Steal wifi saved windows passwords with Flipper Zero 
+# Steal wifi saved windows passwords with Flipper Zero
 
-### Installation
+## Installation
 
 ```bash
 git clone https://github.com/FlaviusMosneagu/wifi_passwords.git
@@ -11,6 +11,7 @@ pip install -r requirements
 ```
 
 ### Start the Dashboard
+
 ```bash
 python main.py
 ```

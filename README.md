@@ -1,8 +1,9 @@
 # Steal wifi saved windows passwords with Flipper Zero
 
-![version](https://img.shields.io/badge/version-1.0.0-blue)
-[![GPL-3 License](https://img.shields.io/badge/license-GPLv3-green)](https://choosealicense.com/licenses/gpl-3.0/)
-
+<p align="center">
+    ![version](https://img.shields.io/badge/version-1.0.0-blue)
+    [![GPL-3 License](https://img.shields.io/badge/license-GPLv3-green)](https://choosealicense.com/licenses/gpl-3.0/)
+</p>
 
 **Table of Contents**
 

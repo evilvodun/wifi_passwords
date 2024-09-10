@@ -48,4 +48,4 @@ Also take a look at the `routes` in `main.py` to see all available endpoints.
 
 ## License
 
-**Steal wifi saved windows passwords with Flipper Zero** is distributed under the GPL-3.0 license. See [`LICENSE`](LICENSE.md) for more details.
+**Steal wifi saved windows passwords with Flipper Zero** is distributed under the GPL-3.0 license. See [`LICENSE`](LICENSE) for more details.
